@@ -1,0 +1,217 @@
+.whatsappColor {
+  color: $whatsappColor !important;
+}
+.phoneColor {
+  color: $phoneColor !important;
+}
+.whatsappColor,
+.phoneColor {
+  /* transition: all 0.2s ease;
+  &:hover {
+    transform: translateY(-5px);
+  } */
+}
+a {
+  text-decoration: none !important;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0 !important;
+}
+@font-face {
+  font-family: $font-family-base;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/inter-v12-latin-regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: $stylisht-font;
+  font-style: normal;
+  font-weight: 400;
+  // src: local(''), url('../fonts/KudryashevHeadline-Sans.woff2') format('woff2');
+  src: local(''), url('../fonts/forum-v16-latin-regular.woff') format('woff');
+  font-display: swap;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: $stylisht-font;
+  font-weight: 900;
+}
+
+.form-select,
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}
+/* .form-floating > .form-control,
+.form-floating > .form-select {
+  background-color: $whi;
+  &:focus ~ label {
+    transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
+  }
+} */
+
+.btn-close {
+  border-radius: 100%;
+  &:hover {
+    background-color: $gray-400;
+  }
+}
+
+.modal {
+  backdrop-filter: blur(7px);
+}
+
+.modal {
+  .h5,
+  h5 {
+    font-size: 1.5rem;
+    color: darken($primary, 20%);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba($gray-600, 0.2);
+  }
+  .modal-header {
+    border-bottom: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &__heading {
+      font-size: 1.8rem;
+      @include responsive(max767) {
+        font-size: 1.2rem;
+      }
+    }
+    .btn-close {
+      margin-left: 0;
+    }
+  }
+  .modal-body {
+    padding: 0;
+    .poupContent {
+      // border: red solid 1px;
+      padding: 0 2rem 2.5rem;
+      p {
+        margin-bottom: 1.5rem;
+      }
+      ul {
+        li {
+          display: flex;
+          // justify-content: space-between;
+          align-items: center;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba($gray-600, 0.2);
+          }
+          svg {
+            font-size: 2rem;
+            margin-right: 2rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+    .poupForm {
+      padding: 0 2rem 2.5rem;
+      position: relative;
+    }
+  }
+}
+.br,
+.sqft,
+.million {
+  // border: red solid 1px;
+  font-style: normal;
+  margin-left: -3px;
+}
+
+.invalid_name,
+.invalid_email,
+.invalid_phone {
+  display: none;
+  color: $red;
+}
+.fancybox-slide {
+  padding: 0 !important;
+}
+.fancybox-container {
+  z-index: 10000000000 !important;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+.container-xl,
+.container-fluid {
+  @include maxWidth(1199px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  @include maxWidth(767px) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+.btn {
+  // --bs-btn-border-radius: 100vmax;
+  // position: relative;
+  /* transition: all 0.2s;
+  white-space: nowrap;
+  &:hover {
+    transform: translateY(-4px);
+  }
+  &:focus {
+    transform: translateY(-1px);
+  } */
+
+  /* &:focus {
+    box-shadow: 2px 2px 10px rgba(var(--bs-primary-rgb));
+  } */
+}
+
+/* .btn-primary {
+  // background-color: var(--bs-primary);
+  // border: none;
+  // border-color: var(--bs-primary);
+  --bs-btn-border-width: 2px;
+  border: var(--bs-btn-border-width) solid var(--bs-primary);
+} */
+
+.btn-lg {
+  --bs-btn-font-size: 1rem;
+  --#{$prefix}btn-border-width: 2px;
+  @include responsive(min992) {
+    --bs-btn-border-radius: 100vmax;
+    padding: 0.5rem 1.36rem;
+  }
+}
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: rgba(var(--bs-primary-rgb), 0.9);
+  --bs-btn-hover-border-color: rgba(var(--bs-primary-rgb), 0.9);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: rgba(var(--bs-primary-rgb), 0.95);
+  --bs-btn-active-border-color: rgba(var(--bs-primary-rgb), 0.95);
+  transition: 0.35s;
+  &:hover {
+    background-color: $white;
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    box-shadow: 2px 2px 10px rgba(var(--bs-primary-rgb), 0.65);
+  }
+}
