@@ -4,13 +4,8 @@ h1,
 h2,
 .h2,
 h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
+.h3 {
   font-family: $heading-font;
-  // font-weight: 800;
 }
 
 figure {
@@ -35,4 +30,6 @@ figure {
 
 .btn {
   border-radius: 100vmax;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

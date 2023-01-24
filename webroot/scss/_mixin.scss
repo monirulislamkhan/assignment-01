@@ -61,7 +61,7 @@
 
 .owl-nav {
   position: absolute;
-  top: 20%;
+  top: calc(50% - 2.5rem);
   left: 0;
   right: 0;
 
@@ -75,8 +75,8 @@
     z-index: 100;
 
     i {
-      font-size: 2.5rem;
-      color: #cecece;
+      // font-size: 2.5rem;
+      // color: #cecece;
     }
   }
 
