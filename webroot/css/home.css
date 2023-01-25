@@ -9398,6 +9398,26 @@ header {
   margin-bottom: 1rem;
 }
 
+.service-section {
+  border: red solid 1px;
+  padding: 4rem 0;
+}
+
+.call-action-section {
+  background-color: #256eba;
+  padding: 4rem 0;
+}
+
+.portfolio-section {
+  padding: 4rem 0;
+}
+
+.team-section,
+.faq-section {
+  background-color: #cfe2f5;
+  padding: 4rem 0;
+}
+
 .card .collapse {
   border: 0;
 }
@@ -9483,12 +9503,18 @@ figure {
 }
 
 footer {
-  background-size: 24px;
-  position: relative;
-  border-top: 1px solid rgba(37, 110, 186, 0.1);
-  background-color: #153e69;
+  background-color: #256eba;
+  padding-top: 4rem;
+}
+footer .footer-top {
+  color: #fff;
+}
+footer .footer-top__heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 footer .copyright {
+  background-color: #0c233a;
   font-size: 0.9rem;
   padding: 1.5rem 1rem;
   text-align: center;
