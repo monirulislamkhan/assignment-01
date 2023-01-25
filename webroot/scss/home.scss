@@ -89,6 +89,28 @@
   background-position: center center;
   padding: 5rem 0;
   position: relative;
+  h2 {
+    color: $primary;
+  }
+
+  ul {
+    li {
+      padding-left: 1.5rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      &::before {
+        display: block;
+        float: left;
+        // margin-top: 0.3rem;
+        margin-left: -1.5rem;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f00c';
+        font-weight: 900;
+        color: $primary;
+      }
+    }
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -107,9 +129,46 @@
 
 .video-section {
   background-color: lighten($primary, 20);
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.3rem;
+      background-color: $primary;
+      color: $white;
+      width: 90px;
+      height: 90px;
+      text-decoration: none;
+      font-size: 1.5rem;
+      border-radius: 100vmax;
+    }
+  }
   &__right {
     background-color: lighten($primary, 50);
     padding: 2.5rem 3.5rem;
+    .accordion {
+      counter-reset: list-counter;
+      a {
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+        padding-left: calc(1.25rem + 2rem);
+        font-size: 1.1rem;
+        font-weight: 700;
+        &::before {
+          margin-left: -2rem;
+          display: block;
+          float: left;
+          counter-increment: list-counter;
+          content: counter(list-counter, decimal-leading-zero);
+          color: $primary;
+        }
+      }
+    }
   }
   &__heading {
     font-size: 2.5rem;
@@ -118,13 +177,60 @@
 }
 
 .service-section {
-  border: red solid 1px;
+  background-color: rgba($gray-100, 0.2);
   padding: 4rem 0;
+  h2 {
+    color: $primary;
+  }
+  .service-slides {
+    &__items {
+      padding: 1.5rem;
+      padding-left: calc(4rem + 1.5rem);
+      background-color: $white;
+      box-shadow: 0 0 1.2rem rgba($black, 0.1);
+      h5 {
+        color: $primary;
+      }
+      i {
+        display: block;
+        float: left;
+        margin-left: -4rem;
+        margin-top: 0.4rem;
+        color: $secondary;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .owl-stage-outer {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .owl-stage {
+    @include responsive(min768) {
+      display: flex;
+      flex-wrap: wrap;
+      // gap: 1.5rem;
+    }
+    .owl-item {
+      &:nth-of-type(even) {
+        // border: red solid 1px;
+        @include responsive(min768) {
+          margin-right: 0.5rem !important;
+        }
+      }
+      @include responsive(min768) {
+      }
+      width: calc(50% - 1.5rem);
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .call-action-section {
   background-color: $primary;
-  padding: 4rem 0;
+  padding: 6rem 0;
+  color: $white;
 }
 
 .portfolio-section {
@@ -138,12 +244,21 @@
 }
 
 .card {
+  border: none;
+  border-radius: 0.4rem !important;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .card-body {
+    padding-top: 0;
+  }
   .collapse {
     border: 0;
+    // color: $primary;
     &.show {
       background: $white;
       line-height: 30px;
-      color: #222;
+      // color: #222;
     }
   }
   .collapsing {
@@ -152,18 +267,24 @@
   }
   .card-header {
     border: 0;
-    -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
-    box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
-    border-radius: 2px;
+    // -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+    // box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+    // border-radius: 2px;
     padding: 0;
+    .btn {
+      border-radius: inherit;
+    }
     .btn-header-link {
+      &:not(.collapsed) {
+        color: $primary;
+      }
       display: block;
       text-align: left;
       background: $white;
-      color: #222;
-      padding: 20px;
+      // color: #222;
+      // padding: 20px;
       &.collapsed {
-        background: $white;
+        // background: $white;
         // color: #fff;
         &::after {
           content: '\f106';

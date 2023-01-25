@@ -26,8 +26,10 @@ header {
 }
 .navbar-dark {
   &.navbar {
-    padding-top: 0;
-    padding-bottom: 0;
+    @include responsive(min768) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
   background-color: darken($primary, 10) !important;
   .navbar-toggler {
