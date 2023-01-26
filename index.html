@@ -566,44 +566,73 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <div class="portfolio-menu mt-2 mb-4">
-                <nav class="controls">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
                   <button
+                    class="nav-link active"
+                    id="all-tab"
+                    data-toggle="pill"
+                    data-target="#all"
                     type="button"
-                    class="control outline"
-                    data-filter="all"
+                    role="tab"
+                    aria-controls="all"
+                    aria-selected="true"
                   >
                     All
                   </button>
+                </li>
+                <li class="nav-item" role="presentation">
                   <button
+                    class="nav-link"
+                    id="app-tab"
+                    data-toggle="pill"
+                    data-target="#app"
                     type="button"
-                    class="control outline"
-                    data-filter=".app"
+                    role="tab"
+                    aria-controls="app"
+                    aria-selected="false"
                   >
                     App
                   </button>
+                </li>
+                <li class="nav-item" role="presentation">
                   <button
+                    class="nav-link"
+                    id="card-tab"
+                    data-toggle="pill"
+                    data-target="#card"
                     type="button"
-                    class="control outline"
-                    data-filter=".card"
+                    role="tab"
+                    aria-controls="card"
+                    aria-selected="false"
                   >
                     Card
                   </button>
+                </li>
+                <li class="nav-item" role="presentation">
                   <button
+                    class="nav-link"
+                    id="web-tab"
+                    data-toggle="pill"
+                    data-target="#web"
                     type="button"
-                    class="control outline"
-                    data-filter=".web"
+                    role="tab"
+                    aria-controls="web"
+                    aria-selected="false"
                   >
                     Web
                   </button>
-                </nav>
-              </div>
-              <div
-                class="portfolio-item portfolio-slides owl-carousel owl-theme"
-              >
-                <div class="owl-stage-outer">
-                  <ul class="owl-stage">
-                    <li class="owl-item app mix">
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="all"
+                  role="tabpanel"
+                  aria-labelledby="all-tab"
+                >
+                  <ul class="owl-carousel owl-theme portfolio__slides">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -612,7 +641,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item card mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -621,7 +650,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item web mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -630,7 +659,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item app mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -639,7 +668,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item card mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -648,7 +677,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item web mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -657,7 +686,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item app mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -666,7 +695,7 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item app mix">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -675,7 +704,97 @@
                         height="400"
                       />
                     </li>
-                    <li class="owl-item card mix">
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="app"
+                  role="tabpanel"
+                  aria-labelledby="app-tab"
+                >
+                  <ul class="owl-carousel owl-theme portfolio__slides">
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="card"
+                  role="tabpanel"
+                  aria-labelledby="card-tab"
+                >
+                  <ul class="owl-carousel owl-theme portfolio__slides">
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./webroot/images/tabs-image-450-400.webp"
+                        alt="Image description"
+                        class="img-fluid w-100"
+                        width="450"
+                        height="400"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="web"
+                  role="tabpanel"
+                  aria-labelledby="web-tab"
+                >
+                  <ul class="owl-carousel owl-theme portfolio__slides">
+                    <li>
                       <img
                         src="./webroot/images/tabs-image-450-400.webp"
                         alt="Image description"
@@ -694,16 +813,79 @@
 
       <section class="team-section">
         <div class="container-xl">
-          <div class="h2">TEAM</div>
+          <h2>TEAM</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iure
-            aut delectus, non ex sequi, eveniet quos rem excepturi officia
-            soluta quaerat earum consequuntur corporis!
+            <strong
+              ><em>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident aut nobis consequatur repellendus assumenda quasi
+                eligendi ipsum praesentium iste odio quaerat impedit quo commodi
+                officia quae officiis doloremque, sapiente illo numquam nam
+                architecto, expedita quos?
+              </em></strong
+            >
           </p>
+          <div class="row">
+            <div class="col-md-6">
+              <figure class="team-section__items">
+                <div class="thumbs"></div>
+                <figcaption>
+                  <h4>Walter White</h4>
+                  <div class="designation">Chief Executive Officer</div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Recusandae, nobis ipsam.
+                  </p>
+                  <ul class="social">
+                    <li>
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure class="team-section__items">
+                <div class="thumbs"></div>
+                <figcaption>
+                  <h4>Walter White</h4>
+                  <div class="designation">Chief Executive Officer</div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Recusandae, nobis ipsam.
+                  </p>
+                  <ul class="social">
+                    <li>
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
       <section class="faq-section">
         <div class="container-xl">
+          <h2>FREQUENTLY ASKED QUESTION</h2>
           <div class="accordion" id="faq">
             <div class="card">
               <div class="card-header" id="faqhead1">
@@ -931,7 +1113,7 @@
               nav: true,
             },
             768: {
-              margin: 32,
+              margin: 0,
               items: 'auto',
               nav: false,
               loop: false,
@@ -939,9 +1121,8 @@
           },
         });
 
-        $('.portfolio-slides').owlCarousel({
-          loop: true,
-          margin: 10,
+        $('.portfolio__slides').owlCarousel({
+          // loop: true,
           responsiveClass: true,
           dots: false,
           responsive: {
@@ -950,24 +1131,12 @@
               nav: true,
             },
             768: {
-              margin: 32,
               items: 'auto',
               nav: false,
               loop: false,
             },
           },
         });
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js"></script>
-    <script>
-      var containerEl = document.querySelector('.owl-stage');
-      var mixer = mixitup(containerEl, {
-        // animation: {
-        //   effects: 'fade translateZ(-100px)',
-        //   effectsIn: 'fade translateY(-100%)',
-        //   easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-        // },
       });
     </script>
   </body>

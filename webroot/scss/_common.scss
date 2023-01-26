@@ -4,7 +4,9 @@ h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3,
+h4,
+.h4 {
   font-family: $heading-font;
 }
 
@@ -12,7 +14,8 @@ figure {
   margin-bottom: 0;
 }
 
-.container-xl {
+.container-xl,
+.hero-slides {
   max-width: 1350px;
 }
 
