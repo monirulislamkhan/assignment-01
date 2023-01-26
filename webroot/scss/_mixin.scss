@@ -114,3 +114,22 @@
     }
   }
 }
+
+%custom-accordion {
+  counter-reset: list-counter;
+  a {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    padding-left: calc(1.25rem + 2rem);
+    font-size: 1.1rem;
+    font-weight: 700;
+    &::before {
+      margin-left: -2rem;
+      display: block;
+      float: left;
+      counter-increment: list-counter;
+      content: counter(list-counter, decimal-leading-zero);
+      color: $primary;
+    }
+  }
+}

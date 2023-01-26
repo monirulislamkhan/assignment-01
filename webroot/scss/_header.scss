@@ -6,10 +6,14 @@ header {
     padding: 0.7rem 0;
     display: flex;
     justify-content: space-between;
+    @include responsive(max767) {
+      justify-content: center;
+    }
     ul {
       align-self: center;
       display: flex;
       margin-bottom: 0;
+
       li {
         &:not(:last-child) {
           margin-right: 0.9rem;
@@ -17,6 +21,11 @@ header {
         i {
           color: $secondary;
         }
+      }
+    }
+    @include responsive(max767) {
+      .top__right {
+        display: none;
       }
     }
     a {
@@ -44,7 +53,7 @@ header {
     padding-bottom: 0;
   }
   .nav-item {
-    @media (min-width: 1200px) {
+    @include responsive(min768) {
       padding-top: 1.3rem;
       padding-bottom: 1.4rem;
     }

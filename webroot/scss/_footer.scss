@@ -1,14 +1,52 @@
 footer {
   background-color: $primary;
   padding-top: 4rem;
+  a {
+    color: $white;
+  }
   .footer-top {
     color: $white;
     &__heading {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      margin-bottom: 2.5rem;
+      li {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+        &::before {
+          margin-left: -1.2rem;
+          display: block;
+          float: left;
+          font-family: 'Font Awesome 5 Free';
+          content: '\f054';
+          font-weight: 900;
+        }
+      }
+      &.follow-us {
+        @extend %social-component;
+        li {
+          padding: 0;
+          &::before {
+            margin-left: 0;
+            content: none;
+          }
+          a {
+            // border: red solid 1px;
+            background-color: rgba(lighten($primary, 30), 0.4);
+          }
+        }
+      }
+    }
   }
   .copyright {
+    margin-top: 2rem;
     background-color: darken($primary, 30);
     font-size: 0.9rem;
     padding: 1.5rem 1rem;
