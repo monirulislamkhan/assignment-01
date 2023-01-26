@@ -51,8 +51,10 @@ header {
   .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 2rem;
+    font-weight: 700;
   }
-  .nav-item {
+  .nav-link {
     @include responsive(min768) {
       padding-top: 1.3rem;
       padding-bottom: 1.4rem;

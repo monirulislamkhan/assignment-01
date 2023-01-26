@@ -13,6 +13,12 @@ footer {
     p {
       margin-bottom: 1.5rem;
     }
+    .address {
+      margin-bottom: 1.5rem;
+    }
+    .email {
+      margin-bottom: 3rem;
+    }
     ul {
       margin-bottom: 2.5rem;
       li {
@@ -51,10 +57,25 @@ footer {
     font-size: 0.9rem;
     padding: 1.5rem 1rem;
     text-align: center;
-    // color: $gray-900;
     color: $gray-500;
-    @media (max-width: 991px) {
-      padding-bottom: 6rem;
-    }
   }
+}
+
+#goTop {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  background-color: darken($primary, 20);
+  text-align: center;
+  width: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  z-index: 10000;
+  cursor: pointer;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  border: none;
 }
