@@ -190,6 +190,7 @@
       box-shadow: 0 0 1.2rem rgba($black, 0.1);
       h5 {
         color: $primary;
+        font-weight: 700;
       }
       i {
         display: block;
@@ -231,10 +232,68 @@
   background-color: $primary;
   padding: 6rem 0;
   color: $white;
+  &__right {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100%;
+  }
 }
 
 .portfolio-section {
   padding: 4rem 0;
+  .owl-carousel {
+    display: block;
+  }
+  .owl-stage {
+    @include responsive(min768) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      // gap: 1rem;
+    }
+    .owl-item {
+      border: red solid 1px;
+      &:nth-of-type(3n) {
+        /* @include responsive(min768) {
+          margin-right: 0 !important;
+        } */
+      }
+      @include responsive(min768) {
+        width: calc(33.3% - 2rem);
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .portfolio-menu {
+    text-align: center;
+  }
+  .control {
+    /* background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-transition: all 05s ease;
+    -moz-transition: all 05s ease;
+    -ms-transition: all 05s ease;
+    -o-transition: all 05s ease;
+    transition: all 0.5s ease; */
+  }
+  .control:hover {
+    background: #343a40;
+  }
+  .mixitup-control-active {
+    color: #fff;
+    background: #343a40;
+  }
+  .portfolio-item {
+    padding-top: 30px;
+  }
 }
 
 .team-section,
