@@ -297,6 +297,9 @@ figure {
     border-radius: 0.5rem;
     box-shadow: 0 0 1.2rem rgba($black, 0.1);
     margin-bottom: 2rem;
+    @include responsive(max767) {
+      padding: 1rem;
+    }
     h4 {
       color: $primary;
     }
@@ -307,6 +310,11 @@ figure {
       border-radius: 100vmax;
       align-self: flex-start;
       margin-right: 1.5rem;
+      @include responsive(max430) {
+        flex-basis: 80px;
+        height: 80px;
+        margin-right: 0.8rem;
+      }
     }
 
     .designation {

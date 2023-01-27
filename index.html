@@ -1231,6 +1231,14 @@
         });
 
         $(window).scroll(function () {
+          let sticky = $('.sticky-top'),
+            scroll = $(window).scrollTop();
+
+          if (scroll >= 30) sticky.addClass('position-fixed');
+          else sticky.removeClass('position-fixed');
+        });
+
+        $(window).scroll(function () {
           if ($(this).scrollTop() > 500) {
             $('#goTop').fadeIn();
           } else {

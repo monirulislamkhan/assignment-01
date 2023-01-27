@@ -34,6 +34,9 @@ header {
   }
 }
 .navbar-dark {
+  &.position-fixed {
+    width: 100%;
+  }
   &.navbar {
     @include responsive(min768) {
       padding-top: 0;
